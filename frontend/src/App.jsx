@@ -1,15 +1,11 @@
 import { Button, Box, Typography, Rating } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function App() {
   const [maxStars, setMaxStars] = useState(0);
   const [starCount, setStarCount] = useState(0);
 
-  const handleStarCount = (e) => {
-    const stars = parseInt(e.target.value, 10);
-
-    setStarCount(stars);
-  };
+  const handleStarCount = () => setStarCount(stars);
 
   return (
     <Box className="w-full h-full border-2 border-black flex justify-center items-center">
